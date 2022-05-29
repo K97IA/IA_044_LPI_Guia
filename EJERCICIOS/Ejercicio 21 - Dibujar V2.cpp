@@ -1,8 +1,4 @@
-/* Imprimir triángulos, pirámide y rombo CON FUNCIONES
-	Marvin Josué Aguilar Romero
-	la idea es ejemplificar conceptos en clase, el switch, uso de funciones, ciclos for y do while
-	4/3/2020 */
-	
+
 #include<iostream>						//Usar cin, cout, system pause, system clear, setlocale
 
 using namespace std;					//Usar ventana de comandos

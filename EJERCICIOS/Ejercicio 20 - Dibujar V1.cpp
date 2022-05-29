@@ -1,7 +1,4 @@
-/* Imprimir triángulos, pirámide y rombo SIN FUNCIONES
-	Marvin Josué Aguilar Romero
-	4/3/2020 */
-	
+
 #include<iostream>
 
 using namespace std;

@@ -1,17 +1,5 @@
-/*	====================================================================================================================
-	== Más del 90% de éste código pertenece al libro                                                                  ==
-	== https://openlibra.com/es/book/download/fundamentos-de-programacion-con-el-lenguaje-de-programacion-c-ed-2017   ==
-	== El resto lo he editado yo para intentar hacerlo más didáctico, incluyendo el comentar cada una de las líneas   ==
-	== de código.                                                                                                     ==
-	====================================================================================================================
-	==          Marvin Josué Aguilar Romero ->  marvin.aguilar@unah.edu.hn                                            ==
-	==			Obed Humberto Martínez Reyes -> obed.martinez@unah.edu.hn											  ==
-	==			24 de Febrero de 2020 | Para el tema "Apuntadores"     
-	==          Implementando una pila con listas enlazadas                                                           ==
-	====================================================================================================================
-	
-	Este programa es una implementación de una estructura de tipo pila, ¿Podría usted hacer los cambios para que se 
-	convierta en una implementación de tipo cola? . . . SABEMOS QUE Sí!!!                                                */
+/*	
+Este programa es una implementación de una estructura de tipo pila, ¿Podría usted hacer los cambios para que se convierta en una implementación de tipo cola? . . . SABEMOS QUE Sí!!!                                                */
 
 #include<iostream>		//Permíte usar cin,cout,setlocale
 #include<cstddef>		//Permíte apuntar a NULL

@@ -1,7 +1,3 @@
-/*  Programa ejercicio 7.20 libro "Cómo programar en C++ sexta edición Deitel & Deitel
-	Autor: Marvin Josué Aguilar Romero
-	Fecha: 27/3/2020 #QuedateEnCasa
-	correo:	marvin.aguilar@unah.edu.hn */
     
 #include<iostream>						//cin, cout, setlocale
 #include<iomanip>						//left, rigth, setw, clear/cls, pause
@@ -31,7 +27,7 @@ int vendidos = 0;						//Centinela para saber si hay asientos disponibles
 int main(){
 	setlocale(LC_CTYPE,"Spanish");		//Uso caracteres latinos
 	int		avion[10], op;				//Avión con diez asientos, op a leer de compra
-	inicializarAvion(avion);			//POner los asientos en 0
+	inicializarAvion(avion);			//Poner los asientos en 0
 	bienvenida();						//Mostrar bienvenida
 	do{									//Ciclo de venta, mientras haya asientos vacíos en cualquier clase
 		system("cls");				//Limpiar la pantalla
