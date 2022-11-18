@@ -1,27 +1,27 @@
 
 #include<iostream>
-#include <stdlib.h>							//Null, memoria dinámica, control de procesos, rand(), srand()
+#include <stdlib.h>							//Null, memoria dinÃ¡mica, control de procesos, rand(), srand()
 #include <time.h>							//Funciones con fecha y hora
 #include <iomanip>							//setw
 #include <string.h>							//Manejo de cadenas, corregir problema con espacios en blanco en nombres
 
 using namespace std;
 
-const int T{100};							//Tamaño para arreglos
-const int LI{0};						//Límite inferior nota exámenes
-const int LS{100};						//Límite superior nota exámenes
-const int E{4};							//Constante para cantidad de exámenes
+const int T{100};							//TamaÃ±o para arreglos
+const int LI{0};						//LÃ­mite inferior nota exÃ¡menes
+const int LS{100};						//LÃ­mite superior nota exÃ¡menes
+const int E{4};							//Constante para cantidad de exÃ¡menes
 
 struct Alumno{							//struct alumno
 	string	nombre{};					//Cada alumno posee un nombre
 	double	notas[10]{};				//Cada alumno tiene espacio para 10 notas de momento esto es 4 examenes y un promedio
 };
 
-void leerA(Alumno [], int);			//Prototipo de función para leer alumnos
-void mostrarA(Alumno [], int);		//Prototipo de función para mostrar alumnos
-void ordenarA(Alumno [], int);		//Prototipo de función para ordenar alumnos 
-void notasA(double [], int);		//Asignar 4 notas aleatoriamente (con fines didácticos)
-void calcularP(double [], int);		//Prototipo función para calcular promedio
+void leerA(Alumno [], int);			//Prototipo de funciÃ³n para leer alumnos
+void mostrarA(Alumno [], int);		//Prototipo de funciÃ³n para mostrar alumnos
+void ordenarA(Alumno [], int);		//Prototipo de funciÃ³n para ordenar alumnos 
+void notasA(double [], int);		//Asignar 4 notas aleatoriamente (con fines didÃ¡cticos)
+void calcularP(double [], int);		//Prototipo funciÃ³n para calcular promedio
 
 int main(){
 	setlocale(LC_CTYPE, "Spanish");
