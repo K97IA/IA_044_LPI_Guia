@@ -1,43 +1,43 @@
 
 #include <iostream>							//setlocale, cin, cout
-#include <stdlib.h>							//Null, memoria dinámica, control de procesos, rand(), srand()
+#include <stdlib.h>							//Null, memoria dinÃ¡mica, control de procesos, rand(), srand()
 #include <time.h>							//Funciones con fecha y hora
 
-const int T{100};							//T por Tamaño, para el vector a definir.
-const int LI{-100};							//Límite inferior números aleatorios.
-const int LS{100};							//Límite superior números aleatorios.
+const int T{100};							//T por TamaÃ±o, para el vector a definir.
+const int LI{-100};							//LÃ­mite inferior nÃºmeros aleatorios.
+const int LS{100};							//LÃ­mite superior nÃºmeros aleatorios.
 
 using namespace std;						//Usando elementos del nombre de espacio estandar
 
-void inicializarAVector(int [], int);		//Prototipo de función para inicializar un vector con int números aleatorios
+void inicializarAVector(int [], int);		//Prototipo de funciÃ³n para inicializar un vector con int nÃºmeros aleatorios
 void copiarVector(int [], int [], int);		//Copiar un vector
-void mostrarVector(int[], int);				//Prototipo de función para mostrar un vector de int elementos
-void mostrarV2(int [], int);				//Prototipo de función para mostrar un vector de int elementos sin mucho texto
-void ordenarVID(int[], int);				//Prototipo de función para ordenar vector mediante incersión directa
-void ordenarVBi(int[], int);				//Prototipo de función para ordenar vector mediante incersión binaria
-void ordenarVBu(int[], int);				//Prototipo de función para ordenar vector mediante selección directa por burbuja
-void ordenarVS(int[], int);					//Prototipo de función para ordenar vector mediante selección directa SHELL
+void mostrarVector(int[], int);				//Prototipo de funciÃ³n para mostrar un vector de int elementos
+void mostrarV2(int [], int);				//Prototipo de funciÃ³n para mostrar un vector de int elementos sin mucho texto
+void ordenarVID(int[], int);				//Prototipo de funciÃ³n para ordenar vector mediante incersiÃ³n directa
+void ordenarVBi(int[], int);				//Prototipo de funciÃ³n para ordenar vector mediante incersiÃ³n binaria
+void ordenarVBu(int[], int);				//Prototipo de funciÃ³n para ordenar vector mediante selecciÃ³n directa por burbuja
+void ordenarVS(int[], int);					//Prototipo de funciÃ³n para ordenar vector mediante selecciÃ³n directa SHELL
 
 
-int main(){												//Función principal
+int main(){												//FunciÃ³n principal
 	setlocale(LC_CTYPE, "Spanish");						//Caracteres en castellano
 	int seguir{0}, v[T]{}, v2[T]{}, cant{0};			//Control de programa principal, cantidad de elementos del vector y vector original y copia
 	do{
 		system("cls");																				//Limpiar pantalla
-		cout<<"\n\n Bienvenid@ vamos a jugar con vectores llenándolos y ordenándolos."<<endl;
+		cout<<"\n\n Bienvenid@ vamos a jugar con vectores llenÃ¡ndolos y ordenÃ¡ndolos."<<endl;
 		cout<<"\n\nPara comenzar introducir la longitu del vector [5 - 100]: ";
 		do{																							//validando entrada cant
 			cin>>cant;
 			if((cant<5)||(cant>T)){
-				cout<<"Favor ingresar un número entre 5 y 100: ";
+				cout<<"Favor ingresar un nÃºmero entre 5 y 100: ";
 			}
 		}while((cant<5)||(cant>T));
-		inicializarAVector(v,cant);																	//Inicializar vector con números aleatorios, recuerde que en c++ los vectores se
+		inicializarAVector(v,cant);																	//Inicializar vector con nÃºmeros aleatorios, recuerde que en c++ los vectores se
 																									//pasan SIEMPRE por referencia.
 		mostrarVector(v,cant);																		//Mostrar Vector
 		
-		//Ahora ordenar y mostrar por diferentes métodos.
-		//Como C++ todo paso de parámetro que sea rreglo e spor referencia y no queremos perder el vector original lo copiamos
+		//Ahora ordenar y mostrar por diferentes mÃ©todos.
+		//Como C++ todo paso de parÃ¡metro que sea rreglo e spor referencia y no queremos perder el vector original lo copiamos
 		cout<<"\n Vector dos esta inicializado con cero y en el vamos a copiar el vector original";
 		cout<<"\nVector 2 antes de copiar en el los valores de vector 1: ";
 		mostrarVector(v2,cant);
@@ -45,12 +45,12 @@ int main(){												//Función principal
 		cout<<"Vector 2 ahora: ";
 		mostrarVector(v2,cant);
 		
-		cout<<"\n\n Ordenamiento por incersión Directa: ";
+		cout<<"\n\n Ordenamiento por incersiÃ³n Directa: ";
 		ordenarVID(v2, cant);
 		
 		//Reseteamos V2
 		copiarVector(v, v2, cant);
-		cout<<"\n\n Ordenamiento por incersión Binaria: ";
+		cout<<"\n\n Ordenamiento por incersiÃ³n Binaria: ";
 		ordenarVBi(v2, cant);
 		
 		//Reseteamos V2
@@ -64,11 +64,11 @@ int main(){												//Función principal
 		ordenarVS(v2, cant);
 		
 		
-		cout<<"\n¿Desea volver a ejecutar el programa? (1=Si 2=No): ";
+		cout<<"\nÂ¿Desea volver a ejecutar el programa? (1=Si 2=No): ";
 		do{
 			cin>>seguir;
 			if((seguir<1)||(seguir>2)){
-				cout<<"\nOpción no válida.\n¿Desea volver a ejecutar el programa? (1=Si 2=No): ";
+				cout<<"\nOpciÃ³n no vÃ¡lida.\nÂ¿Desea volver a ejecutar el programa? (1=Si 2=No): ";
 			}			
 		}while((seguir<1)||(seguir>2));
 		
@@ -78,16 +78,16 @@ int main(){												//Función principal
 
 //Definiciones de las funciones
 
-void inicializarAVector(int m[], int c){				//En c++ no es necesario indicar el valor de la primera dimensión de un arreglo cuando se usa como parámetro en funciones
-	srand(time(NULL));									//Inicializar la función de números aleatorios usando TIME como semilla
+void inicializarAVector(int m[], int c){				//En c++ no es necesario indicar el valor de la primera dimensiÃ³n de un arreglo cuando se usa como parÃ¡metro en funciones
+	srand(time(NULL));									//Inicializar la funciÃ³n de nÃºmeros aleatorios usando TIME como semilla
 	for(int i=0; i<c; i++){
-		m[i]	=	LI + rand()%(LS-LI);				//m[i] ahora será un número aleatorio entre los límites inferior y superior		
+		m[i]	=	LI + rand()%(LS-LI);				//m[i] ahora serÃ¡ un nÃºmero aleatorio entre los lÃ­mites inferior y superior		
 	}	
 }
 
 void mostrarVector(int m[], int c){
 	cout<<"\n\n";
-	cout<<"Éste es su vector de "<<c<< " elementos: \n\n  Vector = { ";
+	cout<<"Ã‰ste es su vector de "<<c<< " elementos: \n\n  Vector = { ";
 	for(int i{0}; i<c; i++){
 		if(i==c-1){
 			cout<<" y "<<m[i]<<" }"<<endl;
